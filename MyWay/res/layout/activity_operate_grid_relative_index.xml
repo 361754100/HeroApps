@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView
+        android:id="@+id/op_grid_main_img_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/op_grid_main_top"
+        android:contentDescription="@string/on_my_way" />
+    
+    <LinearLayout
+        android:id="@+id/op_grid_main_tab_btns"
+        android:layout_below="@id/op_grid_main_img_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/op_main_music_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle" 
+            android:background="#FFD700"
+            android:hint="@string/music_btn_hint"
+            android:fontFamily="宋体" >
+        </Button>
+
+        <Button
+            android:id="@+id/op_main_hotel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle" 
+            android:background="#FFD700"
+            android:hint="@string/hotel_btn_hint" 
+            android:fontFamily="宋体" >
+        </Button>
+
+        <Button
+            android:id="@+id/op_main_map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical" 
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle" 
+            android:background="#FFD700"
+            android:hint="@string/map_btn_hint" 
+            android:fontFamily="宋体" >
+        </Button>
+        
+    </LinearLayout>
+	<!--  
+    <WebView
+        android:layout_below="@id/op_grid_main_tab_btns"
+        android:id="@+id/op_main_webView"
+        android:layout_width="fill_parent"
+        android:minHeight="130dp"
+        android:layout_height="fill_parent">
+    </WebView>
+    -->
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/op_grid_main_tab_btns">
+        
+        <!-- android:layout_width="fill_parent"
+	        android:minHeight="100dp"
+	        android:layout_height="wrap_content" -->
+        
+        <ListView
+	        android:id="@+id/op_main_listView"
+	        android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="@null">
+	    </ListView>
+	    
+        <TextView
+            android:id="@+id/sDialog"
+            android:layout_width="50.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#ff000000"
+            android:shadowRadius="10"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:background="#515151"
+            android:alpha="0.9"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+        
+        <com.example.myway.plugin.PinYinsBar 
+            android:id="@+id/pinYinsBar"
+            android:layout_width="18dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"
+            android:background="#CCCCCC">
+        </com.example.myway.plugin.PinYinsBar>
+    </FrameLayout>
+    
+    <LinearLayout
+        android:id="@+id/op_grid_main_music_controlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+		
+        <LinearLayout
+	        android:id="@+id/op_grid_main_music_seekBar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	       	<SeekBar
+	       	    android:id="@+id/op_main_seekBar"
+	       	    android:layout_width="match_parent"
+	       	    android:layout_height="wrap_content">
+	       	</SeekBar>
+	    </LinearLayout>
+	    
+        <LinearLayout
+	        android:id="@+id/op_grid_main_music_btns"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	        <Button
+	            android:id="@+id/op_main_music_last_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal|center_vertical"
+	            android:layout_weight="1"
+	            style="?android:attr/buttonBarButtonStyle" 
+	            android:background="#FFD700"
+	            android:hint="@string/lastOne"
+	            android:fontFamily="宋体" >
+	        </Button>
+	        
+	        <Button
+	            android:id="@+id/op_main_music_pause_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal|center_vertical"
+	            android:layout_weight="1"
+	            style="?android:attr/buttonBarButtonStyle" 
+	            android:background="#FFD700"
+	            android:hint="@string/pause"
+	            android:fontFamily="宋体" >
+	        </Button>
+	
+	        <Button
+	            android:id="@+id/op_main_music_stop_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal|center_vertical"
+	            android:layout_weight="1"
+	            style="?android:attr/buttonBarButtonStyle" 
+	            android:background="#FFD700"
+	            android:hint="@string/stop" 
+	            android:fontFamily="宋体" >
+	        </Button>
+	
+	        <Button
+	            android:id="@+id/op_main_music_next_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal|center_vertical" 
+	            android:layout_weight="1"
+	            style="?android:attr/buttonBarButtonStyle" 
+	            android:background="#FFD700"
+	            android:hint="@string/nextOne" 
+	            android:fontFamily="宋体" >
+	        </Button>
+	        
+	    </LinearLayout>
+        
+    </LinearLayout>
+    
+    
+    
+</RelativeLayout>
