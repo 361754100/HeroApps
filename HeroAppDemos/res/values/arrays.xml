@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listViewArr">
+       <item>靓仔璋1</item> 
+       <item>靓仔璋2</item> 
+       <item>靓仔璋3</item> 
+    </string-array>
+</resources>

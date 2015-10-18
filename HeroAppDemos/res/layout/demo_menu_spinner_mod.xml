@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView
+    android:id="@+id/choiceText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</TextView>
+
+<EditText
+    android:id="@+id/editInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/hintText">
+</EditText>
+<LinearLayout
+    android:id="@+id/btnLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+	    android:id="@+id/editAdd"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/addBtn">
+	</Button>
+	
+	<Button
+	    android:id="@+id/editDel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/delBtn">
+	</Button>
+</LinearLayout>
+<Spinner
+    android:id="@+id/spinner_select"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</Spinner>
+
+</LinearLayout>

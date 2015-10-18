@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation ="vertical" >    
+	<AutoCompleteTextView 
+	    android:id="@+id/auto"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:completionHint="请输入图书名称"
+	    android:dropDownVerticalOffset="10dp"
+	    android:completionThreshold="1">
+	</AutoCompleteTextView>
+	
+	<MultiAutoCompleteTextView
+	    android:id="@+id/mauto"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:completionThreshold="1">
+	</MultiAutoCompleteTextView>
+</LinearLayout>

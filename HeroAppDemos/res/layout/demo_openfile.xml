@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <TextView
+        android:id="@+id/txtShow"
+        android:layout_width="314dp"
+        android:layout_height="373dp"
+        android:layout_x="3dp"
+        android:layout_y="3dp">
+    </TextView>
+    
+    <Button
+        android:id="@+id/txtOpenBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openBtn"
+        android:layout_x="2dp"
+        android:layout_y="378dp">
+    </Button>
+
+    <Button
+        android:id="@+id/txtClearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clearBtn"
+        android:layout_x="239dp"
+        android:layout_y="378dp">
+    </Button>
+    
+</AbsoluteLayout>

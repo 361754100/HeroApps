@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <CalendarView
+        android:id="@+id/calendarView1"
+        android:layout_width="match_parent"
+        android:startYear="2014"
+        android:endYear="2020"
+        android:minDate="@string/minDate"
+        android:maxDate="@string/maxDate"
+        android:layout_height="282dp" />
+
+    <Button
+        android:id="@+id/resBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submitBtnTip" />
+
+</LinearLayout>

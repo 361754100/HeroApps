@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="253dp"
+        android:layout_y="5dp"
+        android:text="@string/toSearch">
+    </Button>
+	
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="112dp"
+        android:layout_height="52dp"
+        android:textSize="18sp"
+        android:layout_x="119dp"
+        android:layout_y="4dp"
+        android:hint="@string/hintText">
+    </EditText>
+    
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+ 		android:layout_x="10dp"
+        android:layout_y="155dp">
+    </TextView>
+    
+</AbsoluteLayout>
