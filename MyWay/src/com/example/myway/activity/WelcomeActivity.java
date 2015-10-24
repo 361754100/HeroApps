@@ -10,11 +10,11 @@ import android.os.Bundle;
 import com.example.myway.R;
 
 public class WelcomeActivity extends Activity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome);
+		
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask(){
 			@Override

@@ -13,6 +13,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnDragListener;
@@ -229,6 +230,20 @@ public class OperateMainActivity extends Activity {
 	public void onBackPressed() {
 		moveTaskToBack(true);
 //		super.onBackPressed();
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.menu_exit:
+				musicService.stop();
+				super.finish();
+				break;
+	
+			default:
+				break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 	
 }

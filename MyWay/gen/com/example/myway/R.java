@@ -27,10 +27,14 @@ public final class R {
         public static final int welcome_bg_img_0=0x7f020003;
         public static final int welcome_bg_img_1=0x7f020004;
         public static final int welcome_bg_img_2=0x7f020005;
+        public static final int welcome_bg_img_3=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f080014;
         public static final int catalog=0x7f080012;
+        public static final int hero_app_version=0x7f080011;
+        public static final int menu_exit=0x7f080016;
+        public static final int menu_playQuartz=0x7f080014;
+        public static final int menu_setting=0x7f080015;
         public static final int op_grid_main_img_top=0x7f080000;
         public static final int op_grid_main_music_btns=0x7f08000b;
         public static final int op_grid_main_music_controlBar=0x7f080008;
@@ -49,7 +53,6 @@ public final class R {
         public static final int sDialog=0x7f080006;
         public static final int title=0x7f080013;
         public static final int welcome_bg_img=0x7f080010;
-        public static final int welcome_bg_img2=0x7f080011;
     }
     public static final class layout {
         public static final int activity_operate_grid_relative_index=0x7f030000;
@@ -60,18 +63,22 @@ public final class R {
         public static final int operate_main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
+        public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int hotel_btn_hint=0x7f050005;
-        public static final int lastOne=0x7f050008;
-        public static final int map_btn_hint=0x7f050006;
-        public static final int music_btn_hint=0x7f050004;
-        public static final int nextOne=0x7f05000b;
-        public static final int on_my_way=0x7f050003;
-        public static final int pause=0x7f050009;
-        public static final int stop=0x7f05000a;
-        public static final int test=0x7f050007;
+        public static final int app_version=0x7f050001;
+        public static final int hello_world=0x7f050003;
+        public static final int hotel_btn_hint=0x7f050006;
+        public static final int lastOne=0x7f050009;
+        public static final int map_btn_hint=0x7f050007;
+        public static final int menu_exit=0x7f05000f;
+        public static final int menu_playQuartz=0x7f05000d;
+        public static final int menu_setting=0x7f05000e;
+        public static final int music_btn_hint=0x7f050005;
+        public static final int nextOne=0x7f05000c;
+        public static final int on_my_way=0x7f050004;
+        public static final int pause=0x7f05000a;
+        public static final int stop=0x7f05000b;
+        public static final int test=0x7f050008;
     }
     public static final class style {
         /** 
