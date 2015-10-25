@@ -117,7 +117,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:orientation="horizontal" >
-	
+			<!-- 这是音乐进度条 -->
 	       	<SeekBar
 	       	    android:id="@+id/op_main_seekBar"
 	       	    android:layout_width="match_parent"

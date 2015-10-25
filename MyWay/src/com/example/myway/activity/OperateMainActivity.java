@@ -3,33 +3,26 @@ package com.example.myway.activity;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import android.R.color;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnDragListener;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myway.R;
-import com.example.myway.R.id;
-import com.example.myway.R.layout;
-import com.example.myway.R.menu;
 import com.example.myway.adapter.SortApdapter;
 import com.example.myway.model.ListViewSortModel;
 import com.example.myway.plugin.CharacterParser;
@@ -49,9 +42,13 @@ public class OperateMainActivity extends Activity {
 	private PinyinComparator pinYinComparator;
 	
 	private WebView webView = null;
+	//音乐控制按钮
 	private Button btnStart, btnStop, btnNext, btnLast;
+	//开头字母选中时的中间浮动提示文本框
 	private TextView txtInfo;
+	//音乐进度条
 	private SeekBar seekBar;
+	//音乐控制服务（后台的）
 	private MusicService musicService;
 	private boolean autoChange, manulChange;
 	private boolean isPause;
@@ -64,24 +61,36 @@ public class OperateMainActivity extends Activity {
 		
 		listView = (ListView) findViewById(R.id.op_main_listView);
 		seekBar = (SeekBar) findViewById(R.id.op_main_seekBar);
-		seekBar.setOnDragListener(new OnDragListener(){
+		
+		seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
 			@Override
-			public boolean onDrag(View arg0, DragEvent arg1) {
+			public void onProgressChanged(SeekBar seekBar, int arg1, boolean arg2) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				autoChange = false;
+				manulChange = true;
+			}
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
 				int progress = seekBar.getProgress();
 				if(!autoChange && manulChange){
 					int musicMax = musicService.player.getDuration();
 					int seekBarMax = seekBar.getMax();
-					musicService.player.seekTo(musicMax*progress/seekBarMax);
 					
-					musicService.player.pause();
+					int seekIndex = musicMax*progress/seekBarMax;
+					
+					musicService.player.seekTo(seekIndex);
+					
 					autoChange = true;
 					manulChange = false;
 				}
-				
-				return true;
 			}
-			
 		});
+		
 		musicService = new MusicService(seekBar);
 		
 		btnStart = (Button) findViewById(R.id.op_main_music_pause_btn);
@@ -208,19 +217,6 @@ public class OperateMainActivity extends Activity {
 		listView.setAdapter(sortAdapter);
 	}
 	
-	public void onStopTrackingTouch(SeekBar seekBar){
-		int progress = seekBar.getProgress();
-		if(!autoChange && manulChange){
-			int musicMax = musicService.player.getDuration();
-			int seekBarMax = seekBar.getMax();
-			musicService.player.seekTo(musicMax*progress/seekBarMax);
-			
-			musicService.player.pause();
-			autoChange = true;
-			manulChange = false;
-		}
-	}
-	
 	public String setPlayInfo(int position, int max){
 		String info = "正在播放："+ musicService.songName;
 		return info;
@@ -228,6 +224,7 @@ public class OperateMainActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
+		//当用户按返回键时，则仅仅隐藏应用而不退出程序
 		moveTaskToBack(true);
 //		super.onBackPressed();
 	}
