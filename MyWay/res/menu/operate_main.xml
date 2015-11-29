@@ -1,5 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <item  
+        android:id="@+id/action_music"  
+        android:icon="@drawable/ic_local_hotel_white_36dp"
+        android:orderInCategory="98" 
+        android:showAsAction="always"/>
+    
+    <item  
+        android:id="@+id/action_music"  
+        android:icon="@drawable/ic_directions_bike_white_36dp"  
+        android:orderInCategory="99"  
+        android:showAsAction="always"/>
+    
     <item
         android:id="@+id/menu_playQuartz"
         android:orderInCategory="100"

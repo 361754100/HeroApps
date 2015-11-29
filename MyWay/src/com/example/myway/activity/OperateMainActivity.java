@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import android.app.ActionBar;
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,7 +35,7 @@ import com.example.myway.plugin.PinYinsBar.OnTouchingLetterChangedListener;
 import com.example.myway.plugin.PinyinComparator;
 import com.example.myway.service.MusicService;
 
-public class OperateMainActivity extends Activity {
+public class OperateMainActivity extends Activity implements TabListener{
 	
 	private ListView listView;
 	private PinYinsBar pinyinBar;
@@ -61,6 +65,12 @@ public class OperateMainActivity extends Activity {
 		
 		listView = (ListView) findViewById(R.id.op_main_listView);
 		seekBar = (SeekBar) findViewById(R.id.op_main_seekBar);
+		
+		ActionBar actionBar = getActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab1).setTabListener(this));
+		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab2).setTabListener(this));
+		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab3).setTabListener(this));
 		
 		seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
 			@Override
@@ -241,6 +251,24 @@ public class OperateMainActivity extends Activity {
 				break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

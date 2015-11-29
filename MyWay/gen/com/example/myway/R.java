@@ -21,20 +21,27 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int op_grid_main_top=0x7f020001;
-        public static final int sidebar_background=0x7f020002;
-        public static final int welcome_bg_img_0=0x7f020003;
-        public static final int welcome_bg_img_1=0x7f020004;
-        public static final int welcome_bg_img_2=0x7f020005;
-        public static final int welcome_bg_img_3=0x7f020006;
+        public static final int action_bar_icon_1=0x7f020000;
+        public static final int ic_directions_bike_white_36dp=0x7f020001;
+        public static final int ic_headset_mic_white_36dp=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int ic_local_hotel_white_36dp=0x7f020004;
+        public static final int ic_settings_input_antenna_white_36dp=0x7f020005;
+        public static final int ic_track_changes_white_36dp=0x7f020006;
+        public static final int op_grid_main_top=0x7f020007;
+        public static final int sidebar_background=0x7f020008;
+        public static final int welcome_bg_img_0=0x7f020009;
+        public static final int welcome_bg_img_1=0x7f02000a;
+        public static final int welcome_bg_img_2=0x7f02000b;
+        public static final int welcome_bg_img_3=0x7f02000c;
     }
     public static final class id {
+        public static final int action_music=0x7f080014;
         public static final int catalog=0x7f080012;
         public static final int hero_app_version=0x7f080011;
-        public static final int menu_exit=0x7f080016;
-        public static final int menu_playQuartz=0x7f080014;
-        public static final int menu_setting=0x7f080015;
+        public static final int menu_exit=0x7f080017;
+        public static final int menu_playQuartz=0x7f080015;
+        public static final int menu_setting=0x7f080016;
         public static final int op_grid_main_img_top=0x7f080000;
         public static final int op_grid_main_music_btns=0x7f08000b;
         public static final int op_grid_main_music_controlBar=0x7f080008;
@@ -64,6 +71,9 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
+        public static final int actionbar_tab1=0x7f050010;
+        public static final int actionbar_tab2=0x7f050011;
+        public static final int actionbar_tab3=0x7f050012;
         public static final int app_name=0x7f050000;
         public static final int app_version=0x7f050001;
         public static final int hello_world=0x7f050003;
@@ -79,6 +89,7 @@ public final class R {
         public static final int pause=0x7f05000a;
         public static final int stop=0x7f05000b;
         public static final int test=0x7f050008;
+        public static final int title_activity_operate_second=0x7f050013;
     }
     public static final class style {
         /** 

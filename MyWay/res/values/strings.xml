@@ -9,12 +9,17 @@
     <string name="music_btn_hint">歌曲</string>
     <string name="hotel_btn_hint">酒店</string>
     <string name="map_btn_hint">导航</string>
-	<string name="test">Test</string>
-	<string name="lastOne">上一首</string>
-	<string name="pause">播放</string>
-	<string name="stop">停止</string>
-	<string name="nextOne">下一首</string>
-	<string name="menu_playQuartz">定时播放</string>
-	<string name="menu_setting">设置选项</string>
-	<string name="menu_exit">退出应用</string>
+    <string name="test">Test</string>
+    <string name="lastOne">上一首</string>
+    <string name="pause">播放</string>
+    <string name="stop">停止</string>
+    <string name="nextOne">下一首</string>
+    <string name="menu_playQuartz">定时播放</string>
+    <string name="menu_setting">设置选项</string>
+    <string name="menu_exit">退出应用</string>
+    <string name="actionbar_tab1">歌曲</string>
+    <string name="actionbar_tab2">电台</string>
+    <string name="actionbar_tab3">直播</string>
+    <string name="title_activity_operate_second">OperateSecondActivity</string>
+
 </resources>
