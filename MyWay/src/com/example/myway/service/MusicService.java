@@ -1,6 +1,7 @@
 package com.example.myway.service;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,16 +48,19 @@ public class MusicService {
 			}
 		});
 		
-		String musicPath = STORAGE_PATH.getAbsolutePath()+"/Music";
-		File musicFile = new File(musicPath);
+		String sdCardPath = STORAGE_PATH.getAbsolutePath();
+//		File musicFile = new File(musicPath);
+		File rootFile = new File(sdCardPath);
+		this.fileIterator(rootFile, new MusicFilter());
 		
-		File[] musicFiles = musicFile.listFiles(new MusicFilter());		
-		if(musicFiles.length > 0 ){
-			for(File file:musicFiles){
-				musicList.add(file.getAbsolutePath());
-			}
-			musicList.add("(End)");
-		}
+		musicList.add("(End)");
+//		File[] musicFiles = rootFile.listFiles(new MusicFilter());		
+//		if(musicFiles.length > 0 ){
+//			for(File file:musicFiles){
+//				musicList.add(file.getAbsolutePath());
+//			}
+//			musicList.add("(End)");
+//		}
 	}
 	
 	public int getSongNum() {
@@ -67,6 +71,21 @@ public class MusicService {
 		this.songNum = songNum;
 	}
 
+	public void fileIterator(File parentFile, FilenameFilter filter){
+		File[] subFiles = parentFile.listFiles(filter);
+		if(subFiles == null || subFiles.length == 0 ){
+			File[] tmpFiles = parentFile.listFiles();
+			if(tmpFiles != null && tmpFiles.length > 0){
+				for(File tmpFile: tmpFiles){
+					fileIterator(tmpFile, filter);
+				}
+			}
+		}else {
+			for(File file:subFiles){
+				musicList.add(file.getAbsolutePath());
+			}
+		}
+	}
 
 
 	public void setPlayName(String filePath){

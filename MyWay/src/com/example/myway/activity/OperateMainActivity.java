@@ -6,12 +6,15 @@ import java.util.Collections;
 import java.util.List;
 
 import android.app.ActionBar;
+import android.app.ActionBar.LayoutParams;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.ClipData.Item;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -67,7 +70,18 @@ public class OperateMainActivity extends Activity implements TabListener{
 		seekBar = (SeekBar) findViewById(R.id.op_main_seekBar);
 		
 		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayShowCustomEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		
+//		View item = getLayoutInflater().inflate(R.id.action_music, null);
+//		actionBar.setCustomView(item, new ActionBar.LayoutParams(LayoutParams.WRAP_CONTENT, 
+//	        		LayoutParams.WRAP_CONTENT));
+//	        ActionBar.LayoutParams mP = (ActionBar.LayoutParams) item.getLayoutParams();
+//	        mP.gravity = mP.gravity & ~Gravity.HORIZONTAL_GRAVITY_MASK | Gravity.CENTER_HORIZONTAL;
+//
+//	        actionBar.setCustomView(item, mP);
+		
 		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab1).setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab2).setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setText(R.string.actionbar_tab3).setTabListener(this));

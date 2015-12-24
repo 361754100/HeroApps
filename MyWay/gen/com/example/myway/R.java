@@ -37,11 +37,12 @@ public final class R {
     }
     public static final class id {
         public static final int action_music=0x7f080014;
+        public static final int action_road=0x7f080015;
         public static final int catalog=0x7f080012;
         public static final int hero_app_version=0x7f080011;
-        public static final int menu_exit=0x7f080017;
-        public static final int menu_playQuartz=0x7f080015;
-        public static final int menu_setting=0x7f080016;
+        public static final int menu_exit=0x7f080018;
+        public static final int menu_playQuartz=0x7f080016;
+        public static final int menu_setting=0x7f080017;
         public static final int op_grid_main_img_top=0x7f080000;
         public static final int op_grid_main_music_btns=0x7f08000b;
         public static final int op_grid_main_music_controlBar=0x7f080008;
