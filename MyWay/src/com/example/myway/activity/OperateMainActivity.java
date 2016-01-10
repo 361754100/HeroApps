@@ -72,6 +72,7 @@ public class OperateMainActivity extends Activity implements TabListener{
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowCustomEnabled(true);
 		actionBar.setDisplayShowHomeEnabled(true);
+		actionBar.setCustomView(R.layout.action_bar_btn_layout);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		
 //		View item = getLayoutInflater().inflate(R.id.action_music, null);
